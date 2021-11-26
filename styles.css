@@ -2,6 +2,10 @@
     border: 1px solid red;
 } */
 
+html {
+	box-sizing: border-box;
+}
+
 body {
     margin: 100px 200px;
     font-family: 'Poppins', sans-serif;
@@ -14,6 +18,14 @@ a {
 
 li {
     list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.block {
+    margin: 2rem 0;
 }
 
 /* ##### HEADER ##### */
@@ -52,35 +64,24 @@ header {
     gap: 2rem;
 }
 
-
 .header-menu ul li, button{
+    display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 600;
-	color: var(--main-font-color);
-	transition: color 0.2s ease-in-out;
 }
 
-.menu-list:before {
-	visibility: hidden;
-  	content: "";
-  	width: 0;
-  	height: 2px;
-  	bottom: 0;
-  	left: 0;
-  	background-color: #0071d4;
-  	transition: all 0.2s ease-in-out;
+.menu-list {
+    transition: color 0.1s ease-in-out;
 }
 
-.menu-list:hover:before {
-	visibility: visible;
-	width: 100%;
-  }
+.menu-list:hover {
+    color: #0071d4;
+}
 
 .discover {
 	margin: auto;
 	width: 7rem;
 	height: 3rem;
-	cursor: pointer;
 	border-radius: 40px;
 	border: none;
 	background-color: #0071d41a;
@@ -93,18 +94,49 @@ header {
 				0px 0px 5px 0px rgba(0, 113, 212, 0.25);
 }
 
-/* ##### REST ##### */
-img {
-    width: 100px;
-}
+/* ##### MAIN SECTIONS ##### */
 
 .section-one {
     display: flex;
-    flex: column;
+    flex-flow: row nowrap;
+    align-content: center;
 }
 
 .section-one div {
     flex: 1;
+    margin: 0;
+}
+
+.section-one a {
+	position: absolute;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #0071d4;
+	transition: all 0.2s ease-in-out;
+}
+
+.section-one a:hover {
+	transform: translateX(4px);
+}
+
+.section-one i {
+	padding-left: 15px;
+	color: #0071d4;
+}
+
+.intro {
+    padding-right: 2rem;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one img {
+    width: 100%;
+    border-radius: 2px;
 }
 
 .section-two {
