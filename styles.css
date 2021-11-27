@@ -1,6 +1,6 @@
-/* * {
+* {
     border: 1px solid red;
-} */
+}
 
 html {
 	box-sizing: border-box;
@@ -28,7 +28,7 @@ button {
     margin: 2rem 0;
 }
 
-/* ##### HEADER ##### */
+/* ########## HEADER ########## */
 header {
     display: flex;
     flex: row;
@@ -49,8 +49,8 @@ header {
 .logo-text a {
     font-size: 1.15rem;
 	font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 .header-menu ul {
@@ -58,9 +58,6 @@ header {
     flex-flow: row;
     align-items:center;
     justify-content: flex-end;
-}
-
-.header-menu ul {
     gap: 2rem;
 }
 
@@ -94,12 +91,14 @@ header {
 				0px 0px 5px 0px rgba(0, 113, 212, 0.25);
 }
 
-/* ##### MAIN SECTIONS ##### */
+/* ########## SECTION 1 ########## */
 
 .section-one {
     display: flex;
     flex-flow: row nowrap;
     align-content: center;
+    margin-top: 6rem;
+    padding: 2rem 0;
 }
 
 .section-one div {
@@ -108,7 +107,6 @@ header {
 }
 
 .section-one a {
-	position: absolute;
 	font-size: 0.85rem;
 	font-weight: 600;
 	color: #0071d4;
@@ -125,7 +123,34 @@ header {
 }
 
 .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-right: 2rem;
+
+}
+
+.intro h1, p, a {
+    margin: 0;
+}
+
+.intro h1 {
+    font-size: 2.25rem;
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.intro a {
+    font-size: 1rem;
+}
+
+.section-one img {
+    width: 100%;
+    border-radius: 2px;
 }
 
 .main-img {
@@ -134,28 +159,82 @@ header {
     align-items: center;
 }
 
-.section-one img {
-    width: 100%;
-    border-radius: 2px;
-}
+/* ########## SECTION 2 ########## */
 
 .section-two {
     display: flex;
     flex-direction: row wrap;
     justify-content: center;
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 2rem 0;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation h3 {
+    font-size: 2rem;
+}
+
+.inline {
+    display: flex;
+    flex-direction: center;
+    margin-top: 2rem;
+    padding: 0;
 }
 
 .container {
     display: flex;
-    flex-flow: column;  
-    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
     gap: 16px;
     padding: 0 16px;
 }
 
+.container i {
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.container i:hover {
+    color: rgb(0, 0, 0);
+    transform: translateY(-4px);
+}
+
+.container p {
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+/* ########## SECTION 3 ########## */
+
 .section-three {
     text-align: center;
+    padding: 2rem 0;
 }
+
+.section-three h5 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.section-three p {
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.section-three p:last-child {
+    text-align: right;
+    color: black;
+}
+
+/* ########## SECTION 4 ########## */
 
 .section-four {
     
